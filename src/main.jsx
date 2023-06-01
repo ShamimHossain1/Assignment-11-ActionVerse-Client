@@ -19,6 +19,7 @@ import MyToys from './Components/Pages/MyToys/MyToys';
 import UpdateData from './Components/Pages/MyToys/UpdateData';
 import Search from './Components/Pages/Search/Search';
 import SearchQ from './Components/Pages/Search/SearchQ/SearchQ';
+import Blog from './Components/Pages/Blogs/Blogs';
 
 
 const router = createBrowserRouter([
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
         {
           path:"/AllToys",
           element:<AllToys></AllToys>
+        },
+        {
+          path:"/blog",
+          element:<Blog></Blog>
         },
         {
           path:"/toys/:id",
