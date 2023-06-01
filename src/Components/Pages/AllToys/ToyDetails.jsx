@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import FeaturedToys from '../Home/Sections/FeaturedToys';
+import RecentlyAdded from '../Home/Sections/RecentlyAdded';
 
 const ToyDetails = () => {
     const toysFullData = useLoaderData()
@@ -8,7 +9,7 @@ const ToyDetails = () => {
     const { _id, photo, ProductName, email, sellerName, subCategory, price, rating, quantity, description } = toysFullData
 
     return (
-        <div className='mb-20'>
+        <div className='mb-20 mt-20'>
             <div className='flex justify-center'>
                 <img className='md:w-3/12' src={photo} alt="" />
             </div>
@@ -50,7 +51,7 @@ const ToyDetails = () => {
                     </div>
                 </div>
             </div>
-            <FeaturedToys></FeaturedToys>
+            <RecentlyAdded></RecentlyAdded>
         </div>
     );
 };
