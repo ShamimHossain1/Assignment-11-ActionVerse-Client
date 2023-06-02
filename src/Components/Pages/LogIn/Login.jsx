@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 import { FaCross, FaEye, FaEyeSlash, FaGithub, FaGoogle } from 'react-icons/fa';
 import { AuthContext } from '../../AuthProver/AuthProvider';
+import useTitle from '../Hook/UseTitle';
 
 
 const Login = () => {
@@ -16,11 +17,11 @@ const Login = () => {
     const [show, setShow] = useState(false)
     const navigate = useNavigate();
     const location = useLocation();
-    const from = location.state?.from?.pathname || '/';
-    // console.log(from)
+    const from = location.state?.from.pathname || '/';
+    console.log(from)
     const emailRef = useRef();
     // console.log(emailRef)
-
+    useTitle('ActionVerse | LogIn')
    
 
     const handleLogin = event => {
@@ -33,10 +34,10 @@ const Login = () => {
         setError('')
         signIn(email, password)
             .then(result => {
+                navigate(from, { replace: true });
                 const loggedUser = result.user    
                 console.log(loggedUser)                     
                 form.reset();
-                navigate(from, { replace: true });
             })
             .catch(error => {
                 console.log(error.message)
@@ -70,25 +71,15 @@ const Login = () => {
     const handleGoogle =()=>[
         signInWithGoogle()
         .then(result=>{
+            navigate(from, { replace: true });
           const loggedUser = result.user
         //   console.log(loggedUser)
-          navigate(from, { replace: true });
         })
         .catch(error=>{
             console.log(error)
           })
        ]
-    const handleGitHub =()=>[
-        signInWithGitHub()
-        .then(result=>{
-          const loggedUser = result.user
-        //   console.log(loggedUser)
-          navigate(from, { replace: true });
-        })
-        .catch(error=>{
-            console.log(error)
-          })
-       ]
+  
     return (
         <div className="max-w-sm mx-auto">
             <h2 className='text-5xl font-bold text-center mb-10'>Please Login</h2>
@@ -149,11 +140,9 @@ const Login = () => {
             </Card>
 
             <button onClick={handleGoogle}  className='bg-white text-blue-600 gap-2 my-4 text-lg w font-semibold w-full flex items-center justify-center border border-blue-600 rounded-lg py-3 '>
-                    <FaGoogle></FaGoogle>   Login With Google
+                    <FaGoogle></FaGoogle>   Login With Google      
                 </button>
-            <button onClick={handleGitHub}  className='bg-white text-blue-600 gap-2 my-4 text-lg w font-semibold w-full flex items-center justify-center border border-blue-600 rounded-lg py-3 '>
-                    <FaGithub></FaGithub>   Login With GitHub
-                </button>
+         
 
 
         </div>

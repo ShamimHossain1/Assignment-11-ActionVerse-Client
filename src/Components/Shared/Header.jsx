@@ -22,17 +22,21 @@ const Header = () => {
     
 
     return (
-        <div  className='lg:px-52 lg:py-5 '>
+        <div  className=' lg:px-52 lg:py-5 '>
             <Navbar
+           
                 
                 fluid={true}
                 rounded={true}
             >
                 <Navbar.Brand href="/">
-
+                    
+                    <div className='flex'>
+                        
+                        <Avatar className='lg:mr-3 ' img='https://images-platform.99static.com//-G4Ae04Qll-CcNd8g4N5_3oSGrw=/665x348:1328x1011/fit-in/500x500/99designs-contests-attachments/91/91307/attachment_91307187'></Avatar>
                     <span className="self-center whitespace-nowrap lg:text-4xl  font-bold text-gray-700">
-                        Shaolin Recipes
-                    </span>
+                    ActionVerse
+                    </span></div>
                 </Navbar.Brand>
                 <div className="flex items-center gap-5 md:order-2">
                 {user ? <>
@@ -67,7 +71,7 @@ const Header = () => {
                                 }
                             </Dropdown.Item>
                         </Dropdown>
-                        <Navbar.Toggle />
+                       
                     </> :
                         <div className='flex gap-3'>
                             <Link className='bg-blue-600  rounded-md px-3 font-semibold text-white py-1' to="/login"><button>Login</button></Link>

@@ -20,6 +20,7 @@ import UpdateData from './Components/Pages/MyToys/UpdateData';
 import Search from './Components/Pages/Search/Search';
 import SearchQ from './Components/Pages/Search/SearchQ/SearchQ';
 import Blog from './Components/Pages/Blogs/Blogs';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 
 
 const router = createBrowserRouter([
@@ -41,7 +42,7 @@ const router = createBrowserRouter([
         },
         {
           path:"/AddAToy",
-          element:<AddAToy></AddAToy>
+          element:<PrivateRoute><AddAToy></AddAToy></PrivateRoute>
         },
         {
           path:"/AllToys",
@@ -58,7 +59,7 @@ const router = createBrowserRouter([
         },
         {
           path:"/myToys",
-          element:<MyToys></MyToys>
+          element:<PrivateRoute><MyToys></MyToys></PrivateRoute>
         
         },
         {

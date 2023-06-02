@@ -2,12 +2,13 @@ import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import FeaturedToys from '../Home/Sections/FeaturedToys';
 import RecentlyAdded from '../Home/Sections/RecentlyAdded';
+import useTitle from '../Hook/UseTitle';
 
 const ToyDetails = () => {
     const toysFullData = useLoaderData()
     console.log(toysFullData)
     const { _id, photo, ProductName, email, sellerName, subCategory, price, rating, quantity, description } = toysFullData
-
+    useTitle('ActionVerse | Toy Details')
     return (
         <div className='mb-20 mt-20'>
             <div className='flex justify-center'>

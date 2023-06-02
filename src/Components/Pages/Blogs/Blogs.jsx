@@ -5,7 +5,7 @@ import useTitle from '../Hook/UseTitle';
 
 const Blog = () => {
 
-    useTitle('PlayfulParadise | Blog')
+    useTitle('ActionVerse | Blog')
     return (
         <div>
             <div className='mb-10'>

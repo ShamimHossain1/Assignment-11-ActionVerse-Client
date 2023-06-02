@@ -6,6 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import { updateProfile } from 'firebase/auth';
 import { AuthContext } from '../../AuthProver/AuthProvider';
+import useTitle from '../Hook/UseTitle';
 
 
 const Register = () => {
@@ -16,7 +17,7 @@ const Register = () => {
     const navigate = useNavigate()
     const location = useLocation()
     const from = location.state?.from?.pathname || '/'
-
+    useTitle('ActionVerse | Register')
     const handleSignUp = event => {
 
         event.preventDefault();

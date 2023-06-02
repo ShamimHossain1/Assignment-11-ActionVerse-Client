@@ -12,7 +12,7 @@ import useTitle from '../Hook/UseTitle';
 const MyToys = () => {
     const { user } = useContext(AuthContext);
     const [toys, setToys] = useState([]);
-    useTitle('PlayfulParadise | My Toys')
+    useTitle('ActionVerse | My Toys')
 
 
     const url = `http://localhost:5000/toys?email=${user?.email}`;
@@ -59,7 +59,7 @@ const MyToys = () => {
             </div>
             
             <div className='px-5 md:mx-28 mb-5 mt-10 flex justify-center md:justify-end'>
-                <Link to="/AddAToy"><button className='bg-[#75E6DA] font-semibold px-3 py-2 rounded-lg'>Add New</button></Link>
+                <Link to="/AddAToy"><button className='bg-blue-600 text-white font-semibold px-3 py-2 rounded-lg'>Add New</button></Link>
             </div>
             <div className='px-5 md:mx-32 flex justify-between bg-[#D4F1F4] mb-2 rounded-lg py-5 '>
                 <div className='flex justify-between w-4/6 md:w-2/12 font-bold'>

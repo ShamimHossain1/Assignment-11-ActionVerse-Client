@@ -9,8 +9,8 @@ import AllToysInfo from './AllToysInfo';
 const AllToys = () => {
     const [toys, setToys] = useState([]);
     const [visible, setVisible] = useState(20);
-    useTitle('PlayfulParadise | All Toys')
-
+    useTitle('ActionVerse | All Toys')
+console.log(toys.length)
 
     useEffect(() => {
         fetch('http://localhost:5000/allToys')
@@ -39,7 +39,7 @@ const AllToys = () => {
     };
     let button;
     if (visible === 20) {
-        button = <button style={{ background: ' linear-gradient(90deg, #75E6DA 0%, #1a6384 100%)' }} className='font-semibold mt-5 mb-16 text-center mx-auto flex justify-center px-5 py-2 rounded text-white' onClick={showMoreItems}>Show More</button>
+        button = <button  className='font-semibold mt-5 mb-16 bg-blue-700 text-center mx-auto flex justify-center px-5 py-2 rounded text-white' onClick={showMoreItems}>Show More</button>
     }
     return (
         <div>
@@ -48,16 +48,16 @@ const AllToys = () => {
                     <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
                     <div class="relative">
                         <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                            <svg aria-hidden="true" class="w-5 h-5 text-[#9D1512] dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                            <svg aria-hidden="true" class="w-5 h-5 text-blue-600 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
                         </div>
 
                         <input onChange={e => setMessage(e.target.value)}
                             type="text"
                             id="message"
-                            name="message" class="block w-full p-4 pl-10 text-sm text-[#9D1512] border border-[#EC903E] rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-[#EC903E] dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search Action Figures" required />
+                            name="message" class="block w-full p-4 pl-10 text-xl text-gray-500 border border-blue-600 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search Action Figures" required />
 
 
-                        <Link to={`/search/${message}`} className=' text-black hover:text-white absolute right-2.5 bottom-2.5 bg-[#75E6DA] hover:bg-[#9D1512] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'>Search</Link>
+                        <Link to={`/search/${message}`} className=' text-white hover:text-white absolute right-2.5 bottom-2.5 bg-blue-600 hover:bg-[#9D1512] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'>Search</Link>
                     </div>
                 </form>
             </div>
@@ -85,9 +85,9 @@ const AllToys = () => {
                 <div className='flex justify-end md:pr-12 border-[#7E90FE]'>
                     <select className='rounded' onChange={(e) => setSearch(e.target.value)}>
                         <option value="">All</option>
-                        <option value="SportsCar">DC</option>
-                        <option value="RegularCar">Marvel</option>
-                        <option value="Truck">Dragon Ball</option>
+                        <option value="DC">DC</option>
+                        <option value="Marvel">Marvel</option>
+                        <option value="Dragon Ball">Dragon Ball</option>
 
 
                     </select>

@@ -1,4 +1,4 @@
-import { Footer } from 'flowbite-react';
+import { Avatar, Footer } from 'flowbite-react';
 import { FaFacebook, FaInstagram, FaTwitter, FaDribbble, FaGithub } from 'react-icons/fa';
 import React from 'react';
 
@@ -8,20 +8,21 @@ const Foooter = () => {
             <Footer container={true}>
                 <div className="w-full px-10">
                     <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
-                        <div>
-                        <span className="self-center whitespace-nowrap lg:text-4xl text-xl  font-bold dark:text-white">
-                    Shaolin Recipes
-                    </span>
-                        </div>
+                    <div className='flex'>
+                        
+                        <Avatar className='lg:mr-3 ' img='https://images-platform.99static.com//-G4Ae04Qll-CcNd8g4N5_3oSGrw=/665x348:1328x1011/fit-in/500x500/99designs-contests-attachments/91/91307/attachment_91307187'></Avatar>
+                    <span className="self-center whitespace-nowrap lg:text-4xl  font-bold text-gray-700">
+                    ActionVerse
+                    </span></div>
                         <div className="grid mt-5 grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-6">
                             <div>
                                 <Footer.Title title="about" />
                                 <Footer.LinkGroup col={true}>
                                     <Footer.Link href="#">
-                                        Recipes
+                                        DC
                                     </Footer.Link>
                                     <Footer.Link href="#">
-                                        Chefs
+                                        Marvel
                                     </Footer.Link>
                                 </Footer.LinkGroup>
                             </div>
@@ -53,7 +54,8 @@ const Foooter = () => {
                     <div className="w-full sm:flex sm:items-center sm:justify-between">
                         <Footer.Copyright
                             href="#"
-                            by="Shaolin Recipes"
+                            by="ActionVerse
+                            "
                             year={2022}
                         />
                         <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">

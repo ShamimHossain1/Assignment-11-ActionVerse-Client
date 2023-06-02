@@ -5,8 +5,10 @@ import Gallery from './Sections/Gallery';
 import Brands from './Sections/Brands';
 import FAQ from './Sections/FAQ';
 import RecentlyAdded from './Sections/RecentlyAdded';
+import useTitle from '../Hook/UseTitle';
 
 const Home = () => {
+    useTitle('ActionVerse')
     return (
         <div>
             <Banner></Banner>

@@ -33,7 +33,7 @@ const RecentlyAddedInfo = ({ toy }) => {
                             <Link
                                 to={`/toys/${_id}`}
                             >
-                                <button href="#" className="text-black bg-[#75E6DA] hover:bg-[#D4F1F4] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">View Details</button>
+                                <button href="#" className="text-white bg-blue-600 hover:scale-110 duration-300 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">View Details</button>
                             </Link>
                         </div>
                     </div>
