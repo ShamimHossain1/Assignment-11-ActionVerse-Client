@@ -29,12 +29,12 @@ const FeaturedToys = () => {
     //console.log(toys)
 
     return (
-        <div className=''>
+        <div data-aos="fade-right" data-aos-duration="1000"  className=''>
             <Tabs className={'mb-28'}>
                 <TabList className={"flex justify-center gap-2"}>
                     <Tab className={"bg-blue-600 text-white px-2 py-1 rounded font-semibold "}><button>DC</button></Tab>
                     <Tab className={"bg-blue-600 text-white px-2 py-1 rounded font-semibold "}><button>Marvel</button></Tab>
-                    <Tab className={"bg-blue-600 text-white px-2 py-1 rounded font-semibold "}><button>Dragon</button></Tab>
+                    <Tab className={"bg-blue-600 text-white px-2 py-1 rounded font-semibold "}><button>Dragon Ball</button></Tab>
                 </TabList>
 
                 <div className='flex justify-center mt-5'>

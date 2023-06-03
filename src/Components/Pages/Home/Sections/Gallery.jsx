@@ -14,7 +14,8 @@ const Gallery = () => {
     }, [])
     return (
         <div data-aos="fade-up"
-        data-aos-anchor-placement="center-center" className='mb-28'>
+        data-aos-anchor-placement="center-center" data-aos-duration="1000" 
+         className='mb-28'>
             <div className='text-center font-semibold text-2xl '>
                 <h1 className='mb-3 font-mono'>Gallery</h1>
                 <div className='flex justify-center'>

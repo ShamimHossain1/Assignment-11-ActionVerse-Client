@@ -96,8 +96,59 @@ console.log(toys.length)
             </div>
 
 
+            <div class="relative overflow-x-auto mx-10 mt-10 shadow-md sm:rounded-lg">
+    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+        <thead class="text-xs  uppercase bg-blue-600 dark:bg-gray-700 text-white">
+            <tr>
+                <th scope="col" class="px-6 py-3">
+                    Product Image
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Product name
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Seller Name
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Sub-Category
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Price
+                </th>
+                <th scope="col" class="px-6 py-3">
+                Available Quantity
+                </th>
+                <th scope="col" class="px-6 py-3">
+                View Details
+                </th>
+            </tr>
+        </thead>
+        <tbody>
 
-            <div className='grid lg:grid-cols-4 gap-10 lg:px-28 mt-6 p-5 mb-20'>
+
+        {
+                    toys.slice(0, visible).filter((item) => {
+                        return search === '' ? item : item.subCategory.includes(search)
+                    }).map(toy => <AllToysInfo
+                        key={toy._id}
+                        toy={toy}
+
+                    ></AllToysInfo>)
+                }
+
+
+
+
+            
+            
+            
+        </tbody>
+    </table>
+</div>
+
+
+
+            {/* <div className='grid lg:grid-cols-4 gap-10 lg:px-28 mt-6 p-5 mb-20'>
                 {
                     toys.slice(0, visible).filter((item) => {
                         return search === '' ? item : item.subCategory.includes(search)
@@ -107,7 +158,7 @@ console.log(toys.length)
 
                     ></AllToysInfo>)
                 }
-            </div>
+            </div> */}
             {button}
         </div>
     );

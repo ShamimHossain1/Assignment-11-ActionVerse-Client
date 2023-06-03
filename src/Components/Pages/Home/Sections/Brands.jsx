@@ -2,8 +2,9 @@ import React from 'react';
 
 const Brands = () => {
     return (
-        <div data-aos="fade-up"
-        data-aos-duration="3000" className='mb-20'>
+        <div data-aos="fade-right" data-aos-duration="5000" 
+      
+         className='mb-20 mt-20'>
             <div className='text-center font-semibold text-2xl mb-10'>
                 <h1 className='mb-3 font-mono'>Featured Brands</h1>
                 <div className='flex justify-center'>

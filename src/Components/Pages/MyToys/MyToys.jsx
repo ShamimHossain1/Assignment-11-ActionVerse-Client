@@ -61,21 +61,35 @@ const MyToys = () => {
             <div className='px-5 md:mx-28 mb-5 mt-10 flex justify-center md:justify-end'>
                 <Link to="/AddAToy"><button className='bg-blue-600 text-white font-semibold px-3 py-2 rounded-lg'>Add New</button></Link>
             </div>
-            <div className='px-5 md:mx-32 flex justify-between bg-[#D4F1F4] mb-2 rounded-lg py-5 '>
-                <div className='flex justify-between w-4/6 md:w-2/12 font-bold'>
-                    <div>
-                        <h1>Picture</h1>
-                    </div>
-                    <div>
-                        <h1>Name</h1>
-                    </div>
-                </div>
-                <div className='font-bold'>
-                    <h1>Action</h1>
-                </div>
-            </div>
-            <div className='mb-96'>
-                {
+            <div class="relative overflow-x-auto mx-10 mt-10 shadow-md sm:rounded-lg">
+    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+        <thead class="text-xs  uppercase bg-blue-600 dark:bg-gray-700 text-white">
+            <tr>
+                <th scope="col" class="px-6 py-3">
+                    Product Image
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Product name
+                </th>
+                
+                <th scope="col" class="px-6 py-3">
+                    Sub-Category
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Price
+                </th>
+                <th scope="col" class="px-6 py-3">
+                Available Quantity
+                </th>
+                <th scope="col" class="px-6 py-3">
+                Action
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+
+
+        {
                     toys.map(toy => <UserToys
                         key={toy._id}
                         toy={toy}
@@ -83,7 +97,16 @@ const MyToys = () => {
 
                     ></UserToys>)
                 }
-            </div>
+
+
+
+            
+            
+            
+        </tbody>
+    </table>
+</div>
+                
         
         </div>
     );
