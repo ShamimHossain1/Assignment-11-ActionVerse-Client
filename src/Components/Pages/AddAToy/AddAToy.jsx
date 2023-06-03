@@ -6,7 +6,7 @@ import useTitle from '../Hook/UseTitle';
 
 const AddAToy = () => {
     const { user } = useContext(AuthContext)
-    useTitle('ActionVerse | All Toys')
+    useTitle('ActionVerse | Add A Toy')
 
     const handleAddToys = event => {
         event.preventDefault();
@@ -29,7 +29,7 @@ const AddAToy = () => {
 
 
 
-        fetch('http://localhost:5000/toys', {
+        fetch('https://server-site-shamimhossain1.vercel.app/toys', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

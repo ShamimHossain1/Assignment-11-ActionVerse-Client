@@ -55,7 +55,7 @@ const router = createBrowserRouter([
         {
           path:"/toys/:id",
           element:<ToyDetails></ToyDetails>,
-          loader : ({params}) => fetch(`http://localhost:5000/allToys/${params.id}`)
+          loader : ({params}) => fetch(`https://server-site-shamimhossain1.vercel.app/allToys/${params.id}`)
         },
         {
           path:"/myToys",
@@ -65,7 +65,7 @@ const router = createBrowserRouter([
         {
           path:"/updateToys/:id",
           element:<UpdateData></UpdateData>,
-          loader: ({params}) => fetch(`http://localhost:5000/allToys/${params.id}`)
+          loader: ({params}) => fetch(`https://server-site-shamimhossain1.vercel.app/allToys/${params.id}`)
         
         },
         
@@ -82,7 +82,7 @@ const router = createBrowserRouter([
         {
             path:':data',
             element: <SearchQ></SearchQ>,
-            loader: ({params}) => fetch(`http://localhost:5000/search?query=${params.data}`)
+            loader: ({params}) => fetch(`https://server-site-shamimhossain1.vercel.app/search?query=${params.data}`)
         }
     ]
 }
