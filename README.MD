@@ -1,9 +1,9 @@
 -----Note Vercel get API Issue sometimes reload for issue----
 
   * live: https://toy-marketplace-ac8e8.web.app/
-  * Github: https://github.com/programming-hero-web-course-4/b7a11-toy-marketplace-client-side-ShamimHossain1
+  * Github: https://github.com/ShamimHossain1/Assignment-11-ActionVerse-Client
   * Server: https://server-site-shamimhossain1.vercel.app/toys
-  * Server Github: https://github.com/programming-hero-web-course-4/b7a11-toy-marketplace-server-side-ShamimHossain1
+  * Server Github: https://github.com/ShamimHossain1/Assignment-11-ActionVerse-Server
 
     * API from: Varcel
     * Responsive: desktop AND Mobile
