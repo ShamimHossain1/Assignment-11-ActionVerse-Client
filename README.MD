@@ -1,9 +1,10 @@
 -----Note Vercel get API Issue sometimes reload for issue----
 
-      Firebase live: https://toy-marketplace-ac8e8.web.app/
-      Clint Github: https://github.com/programming-hero-web-course-4/b7a11-toy-marketplace-client-side-ShamimHossain1
-      Server: https://server-site-shamimhossain1.vercel.app/toys
-      Server Github: https://github.com/programming-hero-web-course-4/b7a11-toy-marketplace-server-side-ShamimHossain1
+  * live: https://toy-marketplace-ac8e8.web.app/
+  * Github: https://github.com/programming-hero-web-course-4/b7a11-toy-marketplace-client-side-ShamimHossain1
+  * Server: https://server-site-shamimhossain1.vercel.app/toys
+  * Server Github: https://github.com/programming-hero-web-course-4/b7a11-toy-marketplace-server-side-ShamimHossain1
+
     API from: Varcel
     Responsive: desktop AND Mobile
     Projects Details:
